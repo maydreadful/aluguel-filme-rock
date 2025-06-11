@@ -1,10 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SiteLayout from "../../SiteLayout";
 import Home from "../../pages/Home";
-import Sobre from "../../pages/Sobre"; // Importar página Sobre
-import Filmes from "../../pages/Filmes"; // Importar página Filmes
-import Contato from "../../pages/Contato"; // Importar página Contato
+import About from "../../pages/Sobre"
 import NotFound from "../../pages/NotFound";
+import Account from "../../pages/Account";
+import Mangas from "../../pages/Filmes";
+import Contato from "../../pages/Contato";
 
 const Paths = () => {
     return (
@@ -12,11 +13,12 @@ const Paths = () => {
             <Routes>
                 <Route path="/" element={<SiteLayout />}>
                     <Route index element={<Home />} />
-                    <Route path="sobre" element={<Sobre />} /> {/* Nova rota */}
-                    <Route path="filmes" element={<Filmes />} /> {/* Nova rota */}
-                    <Route path="contato" element={<Contato />} /> {/* Nova rota */}
+                    <Route path="/account" element={<Account />} />
+                    <Route path="/sobre" element={<About />} />
+                    <Route path="/filmes" element={<Filmes />} />
+                    <Route path="/contato" element={<Contato />} />
                 </Route>
-                <Route path="*" element={<NotFound />} /> {/* Usar * para rota curinga */}
+                <Route path="/*" element={<NotFound />} />
             </Routes>
         </BrowserRouter>
     );

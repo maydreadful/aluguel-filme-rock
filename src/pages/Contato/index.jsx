@@ -1,8 +1,8 @@
-const Contatos = () => {
+const Contato = () => {
     return ( 
         <>
         </>
      );
 }
  
-export default Contatos;
+export default Contato;
