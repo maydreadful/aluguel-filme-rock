@@ -26,7 +26,7 @@ const Header = () => {
             <div className="flex gap-12 items-center">
                 <img
                     src={logo}
-                    alt="Logo do Mangá Open"
+                    alt="Logo"
                     className="w-20 rounded-full"
                 />
                 <NavMenu />
